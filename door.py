@@ -1,12 +1,11 @@
 #!/usr/bin/python
 import time
 import RPi.GPIO as io
-import tabulate
 io.setmode(io.BCM)
 
 pin_list = [ 21, 20, 26, 16 ]
 for list in pin_list:
-        io.setup(list, io.IN, pull_up_down=io.PUD_UP)  # activate input with PullUp
+        io.setup(list, io.IN, pull_up_down=io.PUD_UP)
 
 while True:
     for pin in pin_list:
@@ -23,4 +22,4 @@ while True:
 #               print("DOOR CLOSED", pin)
 
 
-    time.sleep(0.1)
+    time.sleep(1)
